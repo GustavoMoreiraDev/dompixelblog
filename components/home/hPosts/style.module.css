@@ -1,0 +1,42 @@
+.hp-container {
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.hp-top {
+    width: 100%;
+    display: flex;
+    padding: 20px 4%;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+.hp-top h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.hp-t-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 14px;
+    max-width: 200px;
+    color: #000000a8;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    background-color: #E5E5E5;
+}
+
+.hp-c-bottom {
+    gap: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 30px 0;
+    justify-content: center;
+}

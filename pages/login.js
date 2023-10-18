@@ -1,17 +1,15 @@
-import Head from 'next/head'
-import Header from '@/components/header'
-import Hposts from '@/components/home/hPosts'
-export default function Home() {
+import Flogin from "@/components/forms/fLogin";
+import Head from "next/head";
+export default function Login() {
   return (
     <>
       <Head>
-        <title>DOMPIXEL | Blog</title>
+        <title>DOMPIXEL | Entrar</title>
         <meta name="description" content="Dom Pixel Blog" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Header />
-      <Hposts />
+      <Flogin />
     </>
-  )
+  );
 }
