@@ -15,7 +15,7 @@ const Header = () => {
                     <Link className={style['h-btn-right']} href ={'/'} alt={'DomPixel'}>Home</Link>
                     <div className={style['h-user-wrap']}>
                         <Link className={style['h-user-btn']} href={'/login'} alt={'DomPixel'}>Entrar</Link>
-                        <Link className={style['h-user-btn']} href={'/inscreva-se'} alt={'DomPixel'} style={{border: '1px solid #fffff888'}}>
+                        <Link className={style['h-user-btn']} href={'/cadastro'} alt={'DomPixel'} style={{border: '1px solid #fffff888'}}>
                             Inscreva-se
                         </Link>
                     </div>

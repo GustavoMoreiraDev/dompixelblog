@@ -1,0 +1,45 @@
+.fn-container {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.fn-content {
+    width: 100%;
+    padding: 40px;
+    height: 450px;
+    display: flex;
+    max-width: 450px;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+.fn-inputs {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.fn-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #E5E5E5;
+}
+
+.fn-btn-sub {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #1A2E3B;
+}
