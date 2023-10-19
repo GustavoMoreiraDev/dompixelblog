@@ -1,6 +1,5 @@
 .nc-container {
     width: 100%;
-    height: 390px;
     display: flex;
     margin: 50px auto;
     max-width: 1050px;
@@ -41,4 +40,20 @@
     outline: none;
     border: none;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .nc-container {
+        background-color: transparent;
+        flex-direction: column;
+        border-radius: 0;
+        margin: 0;
+    }
+    .nc-left {
+        width: 100%;
+    }
+    .nc-right {
+        background-color: #ffffff;
+        width: 100%;
+    }
 }

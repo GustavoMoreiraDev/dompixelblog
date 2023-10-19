@@ -22,14 +22,12 @@ const Ncolumn = () => {
         console.log('Blog adicionado com ID: ', docRef.id);
     };
       
-    console.log(titulo);
-
     return (
         <>
             <form className={style['nc-container']} onSubmit={() => addBlog(titulo, autor, desc, img)}>
                 <div className={style['nc-left']}>
                     <Input pl={'Titulo do artigo'} v={titulo} t={'text'} on={(e) => setTitulo(e.target.value)} />
-                    <Input pl={'Autor'} />
+                    <Input pl={'Autor'} v={autor} t={'text'} on={(e) => setAutor(e.target.value)} />
                     <QuillEditor content={desc} setContent={setDesc} />
                 </div>
                 <div className={style['nc-right']}>
