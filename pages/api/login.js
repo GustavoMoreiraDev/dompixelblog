@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         if (user) {
           res.status(200).json({ message: "Sucesso ao logar" });
         } else {
-          res.status(401).json({ error: "E-mail ou senha invalidos" });
+          res.status(401).json({ message: "E-mail ou senha invalidos" });
         }
       } catch (err) {
         console.error(err);

@@ -1,13 +1,13 @@
 const db = require("./db");
 
 function createPerson(email, password) {
-  const sql = `INSERT INTO usuarios (email, password) VALUES (?, ?)`;
+  const sql = `INSERT INTO usuarios (email, password, nome) VALUES (?, ?, ?)`;
   const params = [email, password];
   return new Promise((resolve, reject) => {
     db.run(sql, params, function (err) {
       if (err) {
         if (err.code === "SQLITE_CONSTRAINT") {
-          reject(new Error("Email já cadastrado"));
+          reject(new Error("Email ja cadastrado"));
         } else {
           console.error(err.message);
           reject(err);
@@ -31,7 +31,7 @@ function getPeople() {
   });
 }
 function updatePerson(id, email, password) {
-  const sql = `UPDATE usuarios SET email = ?, password = ? WHERE id = ?`;
+  const sql = `UPDATE usuarios SET email = ?, password = ?, nome = ? WHERE id = ?`;
   const params = [email, password, id];
   return new Promise((resolve, reject) => {
     db.run(sql, params, function (err) {

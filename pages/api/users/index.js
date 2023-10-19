@@ -3,7 +3,7 @@ import { createPerson, getPeople } from "../../../backend/model";
 export default async function handler(req, res) {
   const {
     method,
-    body: { email, password },
+    body: { email, password, nome },
   } = req;
 
   switch (method) {
@@ -12,14 +12,14 @@ export default async function handler(req, res) {
         const users = await getPeople();
         const user = users.find((u) => u.email === email);
         if (user) {
-          res.status(409).json({ error: "Email já cadastrado" });
+          res.status(201).json({ message: "Email já cadastrado" });
         } else {
-          const personId = await createPerson(email, password);
+          const personId = await createPerson(email, password, nome);
           res.status(201).json({ message: "Usuário criado com sucesso" });
         }
       } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({ error: "Erro no servidor" });
       }
       break;
     case "GET":
