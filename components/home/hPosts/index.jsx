@@ -13,14 +13,14 @@ const Hposts = () => {
                     <InputMask className={style['hp-t-input']} placeholder={'Buscar por titulo'} />
                 </div>
                 <div className={style['hp-c-bottom']}>
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
-                    <Hcards rota={'/'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
+                    <Hcards rota={'/artigo'} />
                 </div>
             </main>
         </>

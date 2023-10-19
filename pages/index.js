@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Header from '@/components/header'
-import Hposts from '@/components/home/hPosts'
+import Head from 'next/head';
+import Header from '@/components/header';
+import Hposts from '@/components/home/hPosts';
+
 export default function Home() {
   return (
     <>
