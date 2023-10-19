@@ -31,6 +31,13 @@
     background-color: #E5E5E5;
 }
 
+.fn-inputs p {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: default;
+}
 .fn-btn-sub {
     width: 100%;
     border: none;
@@ -42,4 +49,12 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     background-color: #1A2E3B;
+}
+
+.fn-sucesso {
+    color: rgb(17, 197, 17);
+}
+
+.fn-existente {
+    color: red;
 }

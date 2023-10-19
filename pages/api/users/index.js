@@ -12,10 +12,10 @@ export default async function handler(req, res) {
         const users = await getPeople();
         const user = users.find((u) => u.email === email);
         if (user) {
-          res.status(201).json({ message: "Email já cadastrado" });
+          res.status(409).json({ error: "Email já cadastrado" });
         } else {
-          const personId = await createPerson(email, password, nome);
-          res.status(201).json({ message: "Usuário criado com sucesso" });
+          const newUser = await createPerson(email, password, nome);
+          res.status(201).json({ message: 'Usuário criado com sucesso', newUser});
         }
       } catch (err) {
         console.error(err);
