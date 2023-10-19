@@ -1,0 +1,44 @@
+.nc-container {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    margin: 50px auto;
+    max-width: 1050px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.nc-left {
+    gap: 25px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    background-color: #1A2E3B;
+}
+
+.nc-input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+}
+.nc-right {
+    gap: 25px;
+    width: 40%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nc-right button {
+    background-color: #1A2E3B;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+}

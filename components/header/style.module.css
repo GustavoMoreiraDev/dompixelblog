@@ -44,7 +44,10 @@
 .h-avatar {
     width: 40px;
     height: 40px;
+    border: none;
     display: flex;
+    outline: none;
+    cursor: pointer;
     align-items: center;
     border-radius: 20px;
     justify-content: center;

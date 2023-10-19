@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import style from './style.module.css';
 
 import { UseUserData } from '@/context/user';
+import ModalUser from '../custom/modalUser';
 
 const Header = () => {
 
     const { info } = UseUserData();
+    const [ open, setOpen ] = useState(false);
 
     return (
         <>
@@ -26,9 +28,12 @@ const Header = () => {
                         </div>
                     )}
                     {info.length !== 0 && (
-                        <div className={style['h-avatar']}>
-                            <p>{info.nome ? info.nome.charAt(0).toUpperCase() : ''}</p>
-                        </div>
+                        <>
+                            <button onClick={() => setOpen(!open)} className={style['h-avatar']}>
+                                <p>{info.nome ? info.nome.charAt(0).toUpperCase() : ''}</p>
+                            </button>
+                            {open && ( <ModalUser />)}
+                        </>
                     )}
                 </div>
             </header>

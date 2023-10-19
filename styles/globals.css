@@ -13,10 +13,12 @@ body {
   overflow-x: hidden;
   background-color: #E5E5E5;
 }
-
 a {
   color: inherit;
   text-decoration: none;
+}
+.ql-container {
+  border: none !important;
 }
 
 /* 

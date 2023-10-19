@@ -5,12 +5,9 @@ import style from './style.module.css';
 import { setCookie } from 'nookies';
 import axios from 'axios';
 
-import { UseUserData } from '@/context/user';
-
 const Fnew = () => {
 
     const { push } = useRouter();
-    const { setToken } = UseUserData();
     // FORM INPUTS 
     const [ name, setName] = useState(null);
     const [ email, setEmail] = useState(null);
@@ -25,7 +22,6 @@ const Fnew = () => {
         try {
             const response = await axios.post('/api/users', {nome: name, email: email, password: senha});
             setCookie(null, 'tk', response.data.newUser.id, { maxAge: 30 * 24 * 60 * 60, path: '/' });
-            setToken(response.data.newUser.id);
             setAlert(response.data.message);
             setTimeout(() => { push('/')}, 3000);
         } catch (error) {

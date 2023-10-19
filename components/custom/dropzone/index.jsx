@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDropzone } from 'react-dropzone';
-import { LuUserCircle } from 'react-icons/lu';
+import { AiOutlineCloudUpload } from 'react-icons/ai';
 import Image from 'next/image';
 import style from './style.module.css';
 
@@ -25,7 +25,7 @@ const Dropzone = ({ files, setFiles }) => {
     return (
         <div className={style['d-container']} {...getRootProps()}>
             <input {...getInputProps()} />
-            {files.length > 0 ? ( <>{thumbs}</>) : ( <LuUserCircle />)}
+            {files.length > 0 ? ( <>{thumbs}</>) : ( <AiOutlineCloudUpload />)}
         </div>
     );
 };

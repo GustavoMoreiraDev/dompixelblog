@@ -13,8 +13,6 @@ const UserProv = ({ children }) => {
     const token = cookies.tk;
 
     useEffect(() => {
-        
-
         const Dados = async () => {
             setLoading(true);
             try {
